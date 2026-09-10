@@ -55,10 +55,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,te
 <body><a class="skip" href="#main">Saltar al contenido</a><div id="app"></div><div id="toast" class="toast" role="status" aria-live="polite"></div><dialog id="modal" aria-labelledby="modal-title"></dialog>
 <script>
 'use strict';
-/* Refugio Esperanza — portal de adopción.
-   Navegación mediante hash: archivo.html#/mascotas, archivo.html#/admin/login.
-   Las contraseñas nunca se guardan. Los datos de la sesión se mantienen mientras navegas.
-   Las fotografías requieren conexión si no están incrustadas. */
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const store={get(k,d=null){try{return localStorage.getItem(k)??d}catch{return d}},set(k,v){try{localStorage.setItem(k,v)}catch{}}};
